@@ -15,4 +15,17 @@ output:
 ---
 # Bonus section
 ## Loading the data
+```{r}
+library(tidyverse)
+data <- read_csv('raw_data/data.csv')
+data
+```
+
 ## An interesting plot
+This is a boxplot of sex and weight.
+```{r}
+library(ggplot2)
+ggplot(data, aes(x = Sex, y = weight, color = Sex)) +
+  geom_boxplot()
+```
+
